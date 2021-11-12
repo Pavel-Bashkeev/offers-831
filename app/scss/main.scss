@@ -1,0 +1,22 @@
+@import '../../node_modules/reset-css/sass/reset';
+@import './settings/classFrame';
+@import './settings/vars';
+@import './vendor/mixins';
+@import './settings/fonts';
+@import './settings/global';
+
+
+@import './components/hero';
+@import './components/timer';
+@import './components/kit-lam';
+@import './components/kit-create';
+@import './components/kit-nails';
+@import './components/best-perfor';
+@import './components/reviews';
+@import './components/slider';
+@import './components/buy';
+@import './components/hero-with-form';
+@import './components/form';
+@import './components/footer';
+
+

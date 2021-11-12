@@ -1,0 +1,50 @@
+.timer {
+  margin-bottom: 20px;
+  &__text {
+    background-color: #ECCAB1;
+    border-radius: 20px;
+    padding: 9px 5px;
+    max-width: 340px;
+    margin: 0 auto 20px;
+    color: $black;
+    font: 700 18px/22px var(--font);
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      width: 45px;
+      height: 11px;
+      background-color: inherit;
+      clip-path: polygon(50% 100%, 0 0, 100% 0);
+    }
+  }
+
+  &-count {
+    font: 700 60px/73px var(--font);
+    color: $white;
+    width: 85px;
+    text-align: center;
+  }
+
+  &-delimeter {
+    font: 700 60px/73px var(--font);
+    color: $white;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 390px) {
+
+  .timer-count,
+  .timer-delimeter {
+    font: 700 50px/60px var(--font);
+  }
+
+  .timer-count {
+    width: 75px;
+  }
+}

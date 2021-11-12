@@ -1,0 +1,31 @@
+.kit-lam{
+  &__product{
+    margin-bottom: 20px;
+  }
+  &__present{
+    margin-bottom: 20px;
+  }
+  &__descr{
+    font:400 20px/24px var(--font);
+    color: $black;
+    margin-bottom: 20px;
+  }
+  &__list{
+    padding-top: 35px;
+    margin-bottom: 40px;
+    &-item{
+      &:not(:last-child){
+        margin-bottom: 20px;
+      }
+      &::before{
+        content: '';
+        width: 35px;
+        height: 35px;
+        margin-right: 15px;
+        background-image: url('../images/dest/icons/check.svg');
+        @extend %bg-cover;
+        flex-shrink: 0;
+      }
+    }
+  }
+}

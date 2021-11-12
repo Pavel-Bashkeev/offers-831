@@ -1,0 +1,49 @@
+.kit-nails {
+  &__items {
+    padding: 0 20px;
+    margin-bottom: 55px;
+  }
+
+  &__item {
+    &-box {
+      width: 186px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
+      flex-shrink: 0;
+      margin-right: 15px;
+      border-radius: 20px;
+    }
+    &-text{
+      font:500 20px/24px var(--font);
+      color: $black;
+    }
+    &:not(:last-child){
+      margin-bottom: 35px;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+
+      .kit-nails__item-box {
+        margin-right: 0;
+      }
+      .kit-nails__item-text{
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+@media (max-width:390px) {
+  .kit-nails__item-box{
+    width: 150px;
+  }
+}
+@media (max-width:321px) {
+  .kit-nails__items{
+    padding: 0 5px;
+  }
+  .kit-nails__item-box{
+    width: 130px;
+  }
+}

@@ -1,0 +1,23 @@
+.best-perfor{
+  padding-bottom: 0;
+  &__descr{
+    color: $white;
+    font:400 20px/24px var(--font);
+    margin-bottom: 30px;
+    padding:0 20px
+  }
+  &__video{
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  &__info{
+    padding: 0 20px 50px;
+  }
+  &__text{
+    color:$white;
+    font:700 20px/24px var(--font);
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+}

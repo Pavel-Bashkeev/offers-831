@@ -1,0 +1,54 @@
+.buy{
+  padding: 52px 20px;
+  &__title{
+    margin-bottom: 30px;
+  }
+  &-list{
+    counter-reset: item;
+    position: relative;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 16px;
+      left: 37px;
+      height: 80%;
+      width: 4px;
+      background-color: #576588;
+      z-index: -1;
+    }
+    &__item{
+      &:not(:last-child){
+        margin-bottom: 22px;
+      }
+      &::before{
+        counter-increment: item;
+        content: '0'counter(item);
+        width: 77px;
+        height: 77px;
+        border-radius: 50%;
+        border: 5px solid #576588;
+        background-color: #fff;
+        color: #576588;
+        font: 800 35px/42px var(--font);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+      }
+      &-text{
+        color: #2c2929;
+        position: relative;
+        max-width: 260px;
+        font: 400 25px/28px var(--font);
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .buy-list__item-text{
+    word-break: break-word;
+  }
+}
